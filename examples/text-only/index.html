@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title id="title">Text-only PDF.js example</title>
+    <script src="../../src/shared/compatibility.js"></script>
+<!--#endif-->
+
+<!--#if !PRODUCTION-->
+    <script src="../../node_modules/systemjs/dist/system.js"></script>
+    <script src="../../systemjs.config.js"></script>
+
+    <script src="../../node_modules/pdfjs-dist/build/pdf.js"></script>
+    <script src="pdf2svg.js"></script>
+</head>
+<body>
+  <p>Text-only PDF.js example</p>
+  <div id="pageContainer" style="display: inline-block; border: solid 1px black;">
+  </div>
+  <a class="word-export" href="javascript:void(0)"> Export as .doc </a> 
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> 
+<script src="FileSaver.js"></script> 
+<script src="jquery.wordexport.js"></script> 
+<script type="text/javascript">
+    jQuery(document).ready(function($) {
+        $("a.word-export").click(function(event) {
+            $("#pageContainer").wordExport();
+        });
+    });
+    </script>
+</body>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36251023-1']);
+  _gaq.push(['_setDomainName', 'jqueryscript.net']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+</html>
